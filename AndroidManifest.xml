@@ -26,17 +26,14 @@
         android:icon="@mipmap/ic_launcher"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:label="@string/app_name"
+        android:windowSoftInputMode="stateAlwaysHidden"
         android:supportsRtl="true">
 
         <activity
             android:name=".Calculator"
-            android:label="@string/app_name"
             android:launchMode="singleTask"
             android:theme="@style/Theme.Calculator"
             android:exported="true">
-            <layout
-                android:minHeight="220dp"
-                android:minWidth="230dp" />
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
