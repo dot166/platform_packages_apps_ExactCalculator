@@ -15,7 +15,6 @@ android_app {
     },
 
     static_libs: [
-        "cr",
         "androidx.core_core",
         "androidx.annotation_annotation",
         "androidx.appcompat_appcompat",
@@ -24,5 +23,5 @@ android_app {
         "androidx.gridlayout_gridlayout",
         "androidx.recyclerview_recyclerview",
         "com.google.android.material_material",
-    ],
+    ] + ["cr"],
 }
