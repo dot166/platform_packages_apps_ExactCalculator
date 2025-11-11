@@ -7,19 +7,19 @@ import org.lineageos.generatebp.GenerateBpPluginExtension
 import org.lineageos.generatebp.models.Module
 
 plugins {
-    id("com.android.application") version "8.7.1"
-    id("org.jetbrains.kotlin.android") version "1.9.23"
+    id("com.android.application") version "8.13.1"
+    id("org.jetbrains.kotlin.android") version "2.2.21"
     id("org.lineageos.generatebp") version "+"
 }
 
 android {
-    compileSdk = 35
+    compileSdk = 36
     namespace = "com.android.calculator2"
 
     defaultConfig {
         applicationId = "com.android.calculator2"
         minSdk = 31
-        targetSdk = 35
+        targetSdk = 36
         versionCode = 1
         versionName = "1.0"
     }
