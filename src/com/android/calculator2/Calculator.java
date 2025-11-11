@@ -31,7 +31,6 @@ import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
 import android.content.ClipData;
 import android.content.DialogInterface;
-import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Color;
 import android.net.Uri;
@@ -1070,9 +1069,6 @@ public class Calculator extends AppCompatActivity
             return true;
         } else if (itemId == R.id.menu_fraction) {
             displayFraction();
-            return true;
-        } else if (itemId == R.id.menu_licenses) {
-            startActivity(new Intent(this, Licenses.class));
             return true;
         }
         return super.onOptionsItemSelected(item);
