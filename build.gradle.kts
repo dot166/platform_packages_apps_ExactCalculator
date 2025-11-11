@@ -3,23 +3,19 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import org.lineageos.generatebp.GenerateBpPluginExtension
-import org.lineageos.generatebp.models.Module
-
 plugins {
-    id("com.android.application") version "8.7.1"
-    id("org.jetbrains.kotlin.android") version "1.9.23"
-    id("org.lineageos.generatebp") version "+"
+    id("com.android.application") version "8.13.1"
+    id("org.jetbrains.kotlin.android") version "2.2.21"
 }
 
 android {
-    compileSdk = 35
+    compileSdk = 36
     namespace = "com.android.calculator2"
 
     defaultConfig {
         applicationId = "com.android.calculator2"
         minSdk = 31
-        targetSdk = 35
+        targetSdk = 36
         versionCode = 1
         versionName = "1.0"
     }
@@ -53,31 +49,12 @@ android {
         getByName("main") {
             res.srcDirs("res")
             java.srcDirs("src")
-            assets.srcDirs("assets")
             manifest.srcFile("AndroidManifest.xml")
         }
     }
 }
 
 dependencies {
-    implementation("androidx.gridlayout:gridlayout:1.0.0")
-    implementation("androidx.webkit:webkit:1.7.0-alpha02")
-    implementation("com.google.android.material:material:1.11.0")
+    implementation("io.github.dot166:j-Lib:104.0.7")
     implementation("com.hp:crcalc:1.0")
-}
-
-configure<GenerateBpPluginExtension> {
-    targetSdk.set(android.defaultConfig.targetSdk!!)
-    minSdk.set(android.defaultConfig.minSdk!!)
-    availableInAOSP.set { module: Module ->
-        when {
-            module.group.startsWith("androidx") -> true
-            module.group.startsWith("org.jetbrains") -> true
-            module.group == "com.google.android.material" -> true
-            module.group == "com.google.errorprone" -> true
-            module.group == "com.google.guava" -> true
-            module.group == "junit" -> true
-            else -> false
-        }
-    }
 }

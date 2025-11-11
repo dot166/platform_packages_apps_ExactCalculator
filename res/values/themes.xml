@@ -17,25 +17,15 @@
 
 <resources>
 
-    <style name="Theme" parent="Theme.Material3.DayNight">
-        <item name="android:statusBarColor">@color/display_background_color</item>
+    <style name="Theme.Calculator" parent="j.Theme">
+        <item name="android:statusBarColor">?android:colorBackground</item>
         <item name="android:windowLightStatusBar">?isLightTheme</item>
         <item name="android:navigationBarColor">?colorSurface</item>
         <item name="android:windowLightNavigationBar">?isLightTheme</item>
-    </style>
-
-    <style name="Theme.Calculator">
         <item name="windowActionModeOverlay">true</item>
         <item name="android:windowContentOverlay">@null</item>
         <item name="windowNoTitle">true</item>
         <item name="android:layoutDirection">ltr</item>
-    </style>
-
-    <style name="Theme.Licenses" parent="Theme.Material3.DayNight.NoActionBar">
-        <item name="android:statusBarColor">?colorSurface</item>
-        <item name="android:windowLightStatusBar">?isLightTheme</item>
-        <item name="android:navigationBarColor">?colorSurface</item>
-        <item name="android:windowLightNavigationBar">?isLightTheme</item>
     </style>
 
     <style name="Theme.Button" parent="ThemeOverlay.Material3.Button.TextButton">
