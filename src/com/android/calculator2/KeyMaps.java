@@ -502,7 +502,7 @@ public class KeyMaps {
      * when mapping keyboard input to button ids.
      */
     static void addButtonToFunMap(int button_id) {
-        Button button = (Button)mActivity.findViewById(button_id);
+        Button button = mActivity.findViewById(button_id);
         sKeyValForFun.put(button.getText().toString(), button_id);
     }
 
@@ -511,7 +511,7 @@ public class KeyMaps {
      * when translating numbers on output.
      */
     static void addButtonToOutputMap(char c, int button_id) {
-        Button button = (Button)mActivity.findViewById(button_id);
+        Button button = mActivity.findViewById(button_id);
         sOutputForResultChar.put(c, button.getText().toString());
     }
 
@@ -523,7 +523,7 @@ public class KeyMaps {
         Locale locale = Locale.getDefault();
         if (!locale.equals(sLocaleForMaps)) {
             Log.v ("Calculator", "Setting locale to: " + locale.toLanguageTag());
-            sKeyValForFun = new HashMap<String, Integer>();
+            sKeyValForFun = new HashMap<>();
             sKeyValForFun.put("sin", R.id.fun_sin);
             sKeyValForFun.put("cos", R.id.fun_cos);
             sKeyValForFun.put("tan", R.id.fun_tan);
@@ -557,7 +557,7 @@ public class KeyMaps {
                 mPiChar = piString.charAt(0);
             }
 
-            sOutputForResultChar = new HashMap<Character, String>();
+            sOutputForResultChar = new HashMap<>();
             sOutputForResultChar.put('e', "E");
             sOutputForResultChar.put('E', "E");
             sOutputForResultChar.put(' ', String.valueOf(CHAR_DIGIT_UNKNOWN));
